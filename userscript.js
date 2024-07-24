@@ -20,12 +20,12 @@
     if (/^(https?:\/\/).*www\.facebook\.com\//.test(currentUrl)) {
         const downloadFbVideoButton = document.createElement('button');
         downloadFbVideoButton.textContent = 'Download FB Video';
-        //downloadFbVideoButton.style.position = 'fixed';
+        downloadFbVideoButton.style.position = 'fixed';
         downloadFbVideoButton.style.background = '#efefef';
         downloadFbVideoButton.style.color = 'red';
         downloadFbVideoButton.style.padding = '3px 7px';
-        //downloadFbVideoButton.style.bottom = '50px';
-        //downloadFbVideoButton.style.left = '20px';
+        downloadFbVideoButton.style.bottom = '50px';
+        downloadFbVideoButton.style.left = '20px';
         downloadFbVideoButton.style.zIndex = '1000';
         downloadFbVideoButton.style.cursor = 'pointer';
         downloadFbVideoButton.style.border = '1px solid #767676';
@@ -41,10 +41,10 @@
             window.open(mbasicUrl, '_blank');
         });
         var reachButton = document.querySelector('span[aria-label="See who reacted to this"]');
-        if (reachButton) {
-            reachButton.parentNode.append(downloadFbVideoButton);
-        }
-        //document.body.appendChild(downloadFbVideoButton);
+        // if (reachButton) {
+        // reachButton.parentNode.append(downloadFbVideoButton);
+        // }
+        document.body.appendChild(downloadFbVideoButton);
     }
 
     // Process autodownload action on mbasic.facebook.com/groups
